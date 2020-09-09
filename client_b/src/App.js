@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import productService from './services/productService';
 
+import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
 
   const getProducts = async () => {
     let res = await productService.getAll();
+    console.log(res);
     setproducts(res);
   }
 
