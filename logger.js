@@ -15,14 +15,14 @@ module.exports = {
     level: 'error',
     format: winston.format.json(),
     transports: [
-        new winston.transports.File({ filename: 'error.log'}),
+        new winston.transports.File({ filename: 'logs/error.log'}),
         //new winston.transports.MongoDB({ db: process.env.DB_CONNECTION, level: 'error' })
     ],
     exceptionHandlers: [
-      new winston.transports.File({ filename: 'exceptions.log'})
+      new winston.transports.File({ filename: 'logs/exceptions.log'})
     ],
     rejectionHandlers: [
-      new winston.transports.File({ filename: 'rejections.log'})
+      new winston.transports.File({ filename: 'logs/rejections.log'})
     ]
   }),
   simple: winston.createLogger({
